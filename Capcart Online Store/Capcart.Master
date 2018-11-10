@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Capcart.master.cs" Inherits="Capcart_Online_Store.Capcart" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Capcart Online Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }    
+     .jumbotron {
+      margin-bottom: 0;
+    }   
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <div class="jumbotron" style="background-color:#00FF7F; color:azure">
+  <div class="container text-center" >
+    <h1>Capcart Online Store</h1>      
+    <p>A Fresh Approach To Shopping.</p>
+  </div>
+</div>
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="Home.aspx" >Capcart</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="Home.aspx">Home</a></li>
+        <li><a href="products.aspx">Products</a></li>
+        <li><a href="deals.aspx">Deals</a></li>
+        <li><a href="stores.aspx">Stores</a></li>
+        <li><a href="ContactUs.aspx">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right dropdown">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account
+  <div class="dropdown-content">
+      <a href="#">Sign In</a>
+      <a href="#">Sign Up</a>
+      <a href="#">Sign Out</a>
+  </div>
+</a></li>
+       <%-- <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>--%>
+      </ul>
+    </div>
+  </div>
+</nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <p>
+                    &nbsp;</p>
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <p>
+                    &nbsp;</p>
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+
+    <footer class="container-fluid text-center">
+  <p><b>Capcart Online Store Copyright 2018</b></p>  
+  <form class="form-inline">Get deals:
+    <input type="email" class="form-control" size="50" placeholder="Email Address"><br><br>
+    <button type="button" class="btn btn-danger">Sign Up</button>
+  </form>
+</footer>
+
+</body>
+</html>
